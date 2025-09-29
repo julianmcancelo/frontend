@@ -1,0 +1,18 @@
+<div>
+  <h2>Agregar Nuevo Producto</h2>
+  <form (ngSubmit)="guardarProducto()">
+    <mat-form-field>
+      <input matInput placeholder="Nombre" [(ngModel)]="producto.nombre" name="nombre" required>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Descripción" [(ngModel)]="producto.descripcion" name="descripcion" required></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Precio" [(ngModel)]="producto.precio" name="precio" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Stock" [(ngModel)]="producto.stock" name="stock" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Guardar</button>
+  </form>
+</div>

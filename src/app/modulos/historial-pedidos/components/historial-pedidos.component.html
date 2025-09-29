@@ -1,0 +1,15 @@
+<div>
+  <h2>Historial de Pedidos</h2>
+  <div *ngIf="pedidos.length === 0">
+    <p>No has realizado ningún pedido.</p>
+  </div>
+  <div *ngFor="let pedido of pedidos">
+    <h3>Pedido #{{ pedido.id }}</h3>
+    <p>Total: {{ pedido.total | currency }}</p>
+    <ul>
+      <li *ngFor="let item of pedido.items">
+        {{ item.nombre }} - {{ item.precio | currency }}
+      </li>
+    </ul>
+  </div>
+</div>
